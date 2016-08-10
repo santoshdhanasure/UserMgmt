@@ -23,7 +23,7 @@ function edt_id(id)
 {
  if(confirm('Sure to edit ?'))
  {
-  window.location.href='edit_data.php?edit_id='+id;
+  window.location.href='edit_users.php?edit_id='+id;
  }
 }
 function delete_id(id)
@@ -48,7 +48,7 @@ function delete_id(id)
  <div id="content">
     <table align="center">
     <tr>
-    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    <th colspan="5"><a href="user_signup.php">add data here.</a></th>
     </tr>
     <th>First Name</th>
     <th>Last Name</th>
