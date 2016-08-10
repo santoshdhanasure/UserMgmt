@@ -1,10 +1,9 @@
 <?php
-
-use PHPUnit\Framework\TestCase;
+require_once 'PHPUnit/Autoload.php';
+//use PHPUnit\Framework\TestCase;
 include(dirname(__FILE__)."/../user_dao.php");
 
-class DatabaseTest extends TestCase
-{
+class DatabaseTest extends PHPUnit_Framework_TestCase{
 	public function testAdd()
 	{
 		$user_operations = new UserOperations();		

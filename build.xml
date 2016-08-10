@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="UserMgmt" default="welcome" basedir="." description="a demo project">
-	<property name="message" value="Hello World!"/>
-	<target name="welcome">
-		<echo msg="${message}"/>
-	</target>
- 	
+<project name="UserMgmt" default="build" basedir="." description="a demo project">
+ <property name="message" value="Hello World!"/>
+ <target name="welcome">
+  <echo msg="${message}"/>
+ </target>
+ <target name="test">
+  <phpunit printsummary="true" haltonfailure="true">
+   <batchtest>
+    <fileset dir="./tests">
+     <include name="*Test.php"/>
+    </fileset>
+   </batchtest>
+  </phpunit>
+ </target>
+ <target name="build" depends="test">
+  <echo msg="Copying to build directory..."/>
+  
+  <fileset dir="./" id="zipFiles">
+	<include name="**" />
+  </fileset> 
+ <zip destfile="UserMgmt.zip">
+	<fileset refid="zipFiles" />
+	</zip>
+ </target>
 </project>
