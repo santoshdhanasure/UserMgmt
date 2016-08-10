@@ -1,41 +1,15 @@
 <?php
 include_once 'dbconfig.php';
+include_once 'user_dao.php';
 if(isset($_GET['edit_id']))
 {
- $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysql_query($sql_query);
- $fetched_row=mysql_fetch_array($result_set);
+	$user_operations = new UserOperations();
+	$fetched_row=$user_operations->get_user();
 }
 if(isset($_POST['btn-update']))
 {
- // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
- // variables for input data
-
- // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id'];
- // sql query for update data into database
- 
- // sql query execution function
- if(mysql_query($sql_query))
- {
-  ?>
-  <script type="text/javascript">
-  alert('Data Are Updated Successfully');
-  window.location.href='list_user.php';
-  </script>
-  <?php
- }
- else
- {
-  ?>
-  <script type="text/javascript">
-  alert('error occured while updating data');
-  </script>
-  <?php
- }
+	$user_operations = new UserOperations();
+	$user_operations->edit_user();
  // sql query execution function
 }
 if(isset($_POST['btn-cancel']))
