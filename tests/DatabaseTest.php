@@ -4,11 +4,6 @@ require_once 'PHPUnit/Autoload.php';
 include(dirname(__FILE__)."/../user_dao.php");
 
 class DatabaseTest extends PHPUnit_Framework_TestCase{
-	public function testAdd()
-	{
-		$user_operations = new UserOperations();		
-		$this->assertEquals(2,$user_operations->add());
-	}
 	
 	public function testUserAdd()
 	{

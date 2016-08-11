@@ -4,12 +4,26 @@ include_once 'user_dao.php';
 if(isset($_GET['edit_id']))
 {
 	$user_operations = new UserOperations();
-	$fetched_row=$user_operations->get_user();
+	$fetched_row=$user_operations->get_user(false);
 }
 if(isset($_POST['btn-update']))
 {
 	$user_operations = new UserOperations();
-	$user_operations->edit_user();
+	if ($user_operations->edit_user(false)){
+		?>
+		  <script type="text/javascript">
+		  alert('Data Are Updated Successfully');
+		  window.location.href='list_user.php';
+		  </script>
+		  <?php
+	}
+	else{
+		?>
+		  <script type="text/javascript">
+		  alert('error occured while updating data');
+		  </script>
+		  <?php
+	}
  // sql query execution function
 }
 if(isset($_POST['btn-cancel']))
@@ -21,7 +35,7 @@ if(isset($_POST['btn-cancel']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+<title>User Management System</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>

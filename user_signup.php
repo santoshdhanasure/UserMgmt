@@ -4,7 +4,22 @@ include_once 'user_dao.php';
 if(isset($_POST['btn-save']))
 {
 	$user_operations = new UserOperations();
-	$user_operations->add_user();
+	if($user_operations->add_user(false)){
+		?>
+			<script type="text/javascript">
+				alert('Data Are Inserted Successfully ');
+				window.location.href='index.php';
+			</script>
+			<?php
+	}
+	else{
+		?>
+			<script type="text/javascript">
+			alert('error occured while inserting your data');
+			return 0;
+			</script>
+			<?php
+	}
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -19,7 +34,7 @@ if(isset($_POST['btn-save']))
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    <label>User Management System</label>
     </div>
 </div>
 <div id="body">
