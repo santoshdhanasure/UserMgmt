@@ -20,7 +20,7 @@ if(isset($_POST['btn-save']))
 		//}
 		?>
 		<script type="text/javascript">
-			alert('Login Successfull');
+			//alert('Login Successfull');
 			window.location.href='list_user.php';
 		</script>
 		<?php
@@ -28,7 +28,7 @@ if(isset($_POST['btn-save']))
 	 else{
 		 ?>
 	  <script type="text/javascript">
-	  alert('Wrong Credentials.');
+	  //alert('Wrong Credentials.');
 	  </script>
 	  <?php
 	 }
@@ -36,7 +36,7 @@ if(isset($_POST['btn-save']))
  else{
 	 ?>
   <script type="text/javascript">
-  alert('error occured while inserting your data');
+  //alert('error occured while inserting your data');
   </script>
   <?php
  }

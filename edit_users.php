@@ -12,7 +12,7 @@ if(isset($_POST['btn-update']))
 	if ($user_operations->edit_user(false)){
 		?>
 		  <script type="text/javascript">
-		  alert('Data Are Updated Successfully');
+		  //alert('Data Are Updated Successfully');
 		  window.location.href='list_user.php';
 		  </script>
 		  <?php
@@ -20,7 +20,7 @@ if(isset($_POST['btn-update']))
 	else{
 		?>
 		  <script type="text/javascript">
-		  alert('error occured while updating data');
+		  //alert('error occured while updating data');
 		  </script>
 		  <?php
 	}

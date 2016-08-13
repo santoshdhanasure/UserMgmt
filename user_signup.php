@@ -3,11 +3,12 @@ include_once 'dbconfig.php';
 include_once 'user_dao.php';
 if(isset($_POST['btn-save']))
 {
+
 	$user_operations = new UserOperations();
 	if($user_operations->add_user(false)){
 		?>
 			<script type="text/javascript">
-				alert('Data Are Inserted Successfully ');
+			//	alert('Data Are Inserted Successfully ');
 				window.location.href='index.php';
 			</script>
 			<?php
@@ -15,8 +16,7 @@ if(isset($_POST['btn-save']))
 	else{
 		?>
 			<script type="text/javascript">
-			alert('error occured while inserting your data');
-			return 0;
+			//alert('error occured while inserting your data');
 			</script>
 			<?php
 	}

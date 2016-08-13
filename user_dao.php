@@ -2,6 +2,8 @@
 class UserOperations{	
 	public function add_user($test){
 					// variables for input data
+
+
 		$first_name = $_POST['first_name'];
 		$last_name = $_POST['last_name'];
 		$city_name = $_POST['city_name'];
