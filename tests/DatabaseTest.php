@@ -15,7 +15,7 @@ class DatabaseTest extends PHPUnit_Framework_TestCase{
 		$returnVal = $user_operations->add_user(true);
 
 		$this->assertInternalType('array', $returnVal);		
-		$this->assertContains("Car1", $returnVal);
+		$this->assertContains("Car", $returnVal);
 		$this->assertContains("Per", $returnVal);
 		$this->assertContains("Ben", $returnVal);
 	}
