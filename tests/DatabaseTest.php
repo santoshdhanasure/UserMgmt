@@ -1,5 +1,5 @@
 <?php
-require_once 'PHPUnit/Autoload.php';
+#require_once 'PHPUnit/Autoload.php';
 //use PHPUnit\Framework\TestCase;
 include(dirname(__FILE__)."/../user_dao.php");
 
