@@ -5,6 +5,7 @@ include(dirname(__FILE__)."/../user_dao.php");
 
 class DatabaseTest extends PHPUnit_Framework_TestCase{
 	
+	# This is first test case 
 	public function testUserAdd()
 	{
 		$_POST['first_name']="Car";
