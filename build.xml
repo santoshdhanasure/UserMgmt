@@ -5,7 +5,7 @@
   <echo msg="${message}"/>
  </target>
  <target name="test">
-  <phpunit printsummary="true" haltonfailure="true">
+  <phpunit printsummary="true" haltonfailure="true" pharlocation="/usr/local/bin/phpunit">
    <batchtest>
     <fileset dir="./tests">
      <include name="*Test.php"/>
