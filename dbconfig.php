@@ -7,6 +7,7 @@ $node2="NODE2_IP:3306";
 $user="root";
 $pass="root";
 
+# Checking db connections
 if( !mysql_connect($node1, $user, $pass) ){
 
 #if( !$conn_node1 ){
