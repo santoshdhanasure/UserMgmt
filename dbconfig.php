@@ -9,6 +9,7 @@ $pass="root";
 $datbase = "dbtuts";
 
 # Checking db connections
+# Load balancing can be used here
 if( !mysql_connect($node1, $user, $pass) ){
 
 #if( !$conn_node1 ){
