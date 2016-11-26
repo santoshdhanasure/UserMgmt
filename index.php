@@ -1,5 +1,6 @@
 <?php
 // database connection
+// Added 1
 include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
