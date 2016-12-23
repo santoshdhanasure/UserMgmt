@@ -1,4 +1,6 @@
 <?php
+
+# This is just testing
 error_reporting(E_ERROR | E_PARSE);
 
 $node1="NODE1_IP:3306";
