@@ -12,8 +12,13 @@
  <modelVersion>4.0.0</modelVersion>
  <groupId>org.phpsample</groupId>
  <artifactId>User_management_prject</artifactId>
- <packaging>phar</packaging>
+ <!--packaging>phar</packaging-->
  <version>1.0-SNAPSHOT</version>
+ <configuration>
+  <descriptors>
+	<descriptor>assembly.xml</descriptor>
+  </descriptors>
+ </configuration> 
  <!--dependencies>
   <dependency>
    <groupId>de.phpunit</groupId>
