@@ -14,13 +14,12 @@
  <artifactId>Octavia_project</artifactId>
  <packaging>php</packaging>
  <version>1.0-SNAPSHOT</version>
- <dependencies>
-  <!--  phpUnit for PHP 5 -->
+ <!--dependencies>
   <dependency>
    <groupId>de.phpunit</groupId>
    <artifactId>PHPUnit</artifactId>
    <version>3.6.10</version>
    <type>phar</type>
   </dependency>
- </dependencies>
+ </dependencies-->
 </project>
