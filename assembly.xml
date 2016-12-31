@@ -7,7 +7,7 @@
   </formats>
   <fileSets>
     <fileSet>
-      <directory>${project.build.directory}</directory>
+      <directory>/var/tmp</directory>
     </fileSet>
   </fileSets>
 </assembly>
