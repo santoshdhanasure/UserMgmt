@@ -6,6 +6,11 @@
     <format>zip</format>
   </formats>
   <fileSets>
+	<fileSet>
+		<includes>
+			<include>*.php</include>
+		</includes>
+	</fileSet>  
     <fileSet>
       <directory>${project.build.directory}</directory>
     </fileSet>
