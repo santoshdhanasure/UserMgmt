@@ -5,6 +5,7 @@
   <formats>
     <format>zip</format>
   </formats>
+  
   <fileSets>
     <fileSet>
       <directory>/</directory>
