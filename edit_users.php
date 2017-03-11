@@ -1,5 +1,6 @@
 <?php
 # This first cmment
+# This is secnd cmment
 include_once 'dbconfig.php';
 include_once 'user_dao.php';
 if(isset($_GET['edit_id']))
